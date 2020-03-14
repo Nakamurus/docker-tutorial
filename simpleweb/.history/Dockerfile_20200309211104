@@ -1,0 +1,11 @@
+# Specify a base image
+# Use node as base image
+# because normal alpine doesn't preinstall npm
+# Specify :alpine not to install too much programms
+FROM node:alpine
+
+# Install some dependencies
+RUN npm Install
+
+# Default command
+CMD ["npm", "start"]
